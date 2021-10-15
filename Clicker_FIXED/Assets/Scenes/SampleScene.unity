@@ -1134,7 +1134,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 517152754}
         m_TargetAssemblyTypeName: PainelDireito, Assembly-CSharp
-        m_MethodName: AbreFecha
+        m_MethodName: AbreFechaDireito
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
