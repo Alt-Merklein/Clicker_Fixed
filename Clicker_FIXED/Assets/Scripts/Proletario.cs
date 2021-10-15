@@ -13,7 +13,7 @@ public class Proletario : MonoBehaviour
     private int multiplicadorBase;
 
     public int precoBase;
-    public float preco;
+    private float preco;
     private float multiplicadorPreco = 1.1f;
 
     public TextMeshProUGUI precoText;
