@@ -12,8 +12,8 @@ public class Proletario : MonoBehaviour
      [SerializeField]
     private int multiplicadorBase;
 
-    public int precoBase;
-    private float preco;
+    public int precoBase; //preco inical
+    private float preco; 
     private float multiplicadorPreco = 1.1f;
 
     public TextMeshProUGUI precoText;

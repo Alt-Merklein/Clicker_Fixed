@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    
+    //para acessar usar FindObjectOfType<AudioManager>("name");
     public Sound[] sounds;
 
     public AudioManager instance; 
