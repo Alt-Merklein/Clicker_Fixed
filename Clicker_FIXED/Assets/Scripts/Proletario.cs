@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 [System.Serializable]
@@ -8,17 +9,27 @@ public class Proletario : MonoBehaviour
 {
     float timeCounter = 0;
     private int quantidade = 0, level = 1;
-
-     [SerializeField]
-    private int multiplicadorBase; //valor do minion a cada segundo
-
-    public float upgrade;
-
     public int precoBase; //preco inical
     private float preco, precoup; 
-    private float multiplicadorPreco = 1.1f, multiplicadorPrecoup = 2f;
+    [Header("Multiplicadores")]
+    [SerializeField]
+    private int multiplicadorBase; //valor do minion a cada segundo
 
-    public TextMeshProUGUI precoText, precoupText;
+    [SerializeField]
+    private float multiplicadorPreco = 1.1f;
+    [SerializeField]
+    private float multiplicadorPrecoUp = 2f;
+
+    [Header("Textos")]
+    public TextMeshProUGUI precoText;
+    public TextMeshProUGUI precoUpText;
+    public TextMeshProUGUI ganhosText;
+
+    [Header("Cores")]
+    public Image sprite;
+    public Image botaoDeCompra;
+    public Color green;
+    public Color red;
 
     [HideInInspector]
     public Money money;
@@ -26,6 +37,9 @@ public class Proletario : MonoBehaviour
     public void AumentaQuantidade()
     {
         if (money.currency >= preco){
+            if (quantidade == 0){ //PRIMEIRA COMPRA
+                sprite.color = new Color(1,1,1,1);
+            }
             quantidade++;
             money.currency -= (int) preco;
             preco *= multiplicadorPreco;
@@ -44,13 +58,13 @@ public class Proletario : MonoBehaviour
         {
             level++;
             money.currency -= (int) precoup;
-            precoup *= multiplicadorPrecoup;
+            precoup *= multiplicadorPrecoUp;
         }
     }
 
     void AtualizaUp()
     {
-        precoupText.text = string.Concat("R$", ((int) precoup).ToString());
+        precoUpText.text = string.Concat("R$", ((int) precoup).ToString());
     }
     void Start(){
         money = GameObject.Find("MoneyManager").GetComponent<Money>();
@@ -61,8 +75,11 @@ public class Proletario : MonoBehaviour
     void Update(){
         if (timeCounter >= 1f/(quantidade * multiplicadorBase)){
             timeCounter = 0f;
-            money.currency++;
+            money.currency += quantidade * multiplicadorBase;
+            ganhosText.text = (quantidade * multiplicadorBase).ToString() + "/s";
         }
         timeCounter += Time.deltaTime;
+        if (money.currency >= preco) botaoDeCompra.color = green;
+        else botaoDeCompra.color = red;
     }
 }
