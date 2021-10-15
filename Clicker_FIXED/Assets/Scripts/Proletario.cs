@@ -7,16 +7,18 @@ using TMPro;
 public class Proletario : MonoBehaviour
 {
     float timeCounter = 0;
-    private int quantidade = 0;
+    private int quantidade = 0, level = 1;
 
      [SerializeField]
-    private int multiplicadorBase;
+    private int multiplicadorBase; //valor do minion a cada segundo
+
+    public float upgrade;
 
     public int precoBase; //preco inical
-    private float preco; 
-    private float multiplicadorPreco = 1.1f;
+    private float preco, precoup; 
+    private float multiplicadorPreco = 1.1f, multiplicadorPrecoup = 2f;
 
-    public TextMeshProUGUI precoText;
+    public TextMeshProUGUI precoText, precoupText;
 
     [HideInInspector]
     public Money money;
@@ -36,6 +38,20 @@ public class Proletario : MonoBehaviour
         precoText.text = string.Concat("R$", ((int) preco).ToString());
     }
 
+    void Upgrade()
+    {
+        if (money.currency >= precoup)
+        {
+            level++;
+            money.currency -= (int) precoup;
+            precoup *= multiplicadorPrecoup;
+        }
+    }
+
+    void AtualizaUp()
+    {
+        precoupText.text = string.Concat("R$", ((int) precoup).ToString());
+    }
     void Start(){
         money = GameObject.Find("MoneyManager").GetComponent<Money>();
         preco = precoBase;
