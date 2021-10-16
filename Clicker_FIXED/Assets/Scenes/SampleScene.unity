@@ -998,11 +998,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 993161511729039616, guid: c592eadeb864f094d8da725425e68339, type: 3}
       propertyPath: allEvents.Array.data[0].mensagem
-      value: Quer ganhar 80K?
+      value: "Ol\xE1, eu gostaria de fazer uma proposta: me ajude com um esquema
+        e n\xF3s dois sairemos ganhando, posso te prometer um lucro de 80K."
       objectReference: {fileID: 0}
     - target: {fileID: 993161511729039616, guid: c592eadeb864f094d8da725425e68339, type: 3}
       propertyPath: allEvents.Array.data[0].remetente
-      value: AASD
+      value: "An\xF4nimo"
       objectReference: {fileID: 0}
     - target: {fileID: 993161511729039616, guid: c592eadeb864f094d8da725425e68339, type: 3}
       propertyPath: allEvents.Array.data[1].remetente

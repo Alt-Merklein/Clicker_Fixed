@@ -184,12 +184,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carta: {fileID: 993161512789809041}
   allEvents:
-  - mensagem: Quieres ganhar 80K?
-    remetente: 
-    consequenciaIndex: 0
+  - mensagem: "Ol\xE1, fiquei sabendo do seu crescimento e gostaria de fazer uma
+      proposta. O que acha de me ajudar com o esquema para que n\xF3s dois s\xE1iamos
+      ganhando, posso te prometer 80K, o que acha?"
+    remetente: "An\xF4nimo"
+    consequenciaIndex: 1
   - mensagem: Tu foi desligado otario
-    remetente: 
-    consequenciaIndex: 0
+    remetente: DAE
+    consequenciaIndex: 2
   remetente: {fileID: 993161513742604778}
   mensagem: {fileID: 993161513632219892}
 --- !u!1 &993161511956397653
