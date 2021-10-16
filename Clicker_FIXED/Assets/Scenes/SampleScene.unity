@@ -2007,6 +2007,12 @@ MonoBehaviour:
     pitch: 1.7
     loop: 0
     source: {fileID: 0}
+  - name: compraProletario
+    clip: {fileID: 8300000, guid: 3cce2e2bdbfaf774da49426088aa8776, type: 3}
+    volume: 0.745
+    pitch: 2.05
+    loop: 0
+    source: {fileID: 0}
   instance: {fileID: 0}
 --- !u!4 &1241283484
 Transform:

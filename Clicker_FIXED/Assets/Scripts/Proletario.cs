@@ -55,6 +55,7 @@ public class Proletario : MonoBehaviour
             preco *= multiplicadorPreco;
             money.income += multiplicadorBase;
             AtualizaPreco();
+            FindObjectOfType<AudioManager>().PlaySound("compraProletario");
         }
     }
 
