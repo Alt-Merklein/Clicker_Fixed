@@ -326,6 +326,7 @@ GameObject:
   - component: {fileID: 631945138}
   - component: {fileID: 631945136}
   - component: {fileID: 631945137}
+  - component: {fileID: 631945139}
   m_Layer: 5
   m_Name: CreditsButton
   m_TagString: Untagged
@@ -349,8 +350,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -69.263, y: -63}
-  m_SizeDelta: {x: 138.5266, y: 40.7367}
+  m_AnchoredPosition: {x: 0.0000076294, y: -74.7}
+  m_SizeDelta: {x: 314.6603, y: 40.7367}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &631945136
 MonoBehaviour:
@@ -428,7 +429,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cr\xE9ditos"
+  m_text: Creditos
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e5b322647cc2dcd4c847c3a5e1ce9fc3, type: 2}
   m_sharedMaterial: {fileID: -3563945302377287328, guid: e5b322647cc2dcd4c847c3a5e1ce9fc3, type: 2}
@@ -491,7 +492,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -135.55072, w: 0}
+  m_margin: {x: -0.89863586, y: 0, z: 0.14419557, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -505,6 +506,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631945134}
   m_CullTransparentMesh: 1
+--- !u!95 &631945139
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631945134}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e9f6fd41a204fe44b1f4f18e271773f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1042881897
 GameObject:
   m_ObjectHideFlags: 0
