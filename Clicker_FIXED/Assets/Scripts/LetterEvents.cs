@@ -50,7 +50,7 @@ public class LetterEvents : MonoBehaviour
         }
     }
 
-    void EndLetter(){
+    public void EndLetter(){
         if (consequenceIndex == 2) SceneManager.LoadScene("StartScene");
         carta.SetActive(false);
     }

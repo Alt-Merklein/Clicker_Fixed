@@ -638,7 +638,6 @@ GameObject:
   - component: {fileID: 993161512789809040}
   - component: {fileID: 993161512789809042}
   - component: {fileID: 993161512789809043}
-  - component: {fileID: 993161512789809045}
   m_Layer: 5
   m_Name: Carta
   m_TagString: Untagged
@@ -708,28 +707,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &993161512789809045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993161512789809041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb991e481295c754785ef5c0898e4d22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carta: {fileID: 0}
-  allEvents:
-  - mensagem: h3flrglytrltgyyrligyiu5t4yguli54tlgiy5i4giy45ltgtyil4gil4
-    remetente: "An\xF4nnimo"
-    consequenciaIndex: 1
-  - mensagem: Se fudeu otario, foi desligado
-    remetente: DAE
-    consequenciaIndex: 2
-  remetente: {fileID: 0}
-  mensagem: {fileID: 0}
 --- !u!1 &993161512924838885
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +902,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 993161513189829799}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 993161511729039616}
+        m_TargetAssemblyTypeName: LetterEvents, Assembly-CSharp
+        m_MethodName: EndLetter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &993161513503493458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,7 +1035,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 993161513503493463}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 993161511729039616}
+        m_TargetAssemblyTypeName: LetterEvents, Assembly-CSharp
+        m_MethodName: Consequencias
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &993161513632219890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,8 +1113,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Vai tomar no cu o meu nome \xE9 Spininsplenin e eu nao sei o que estou
-    fazendo nesta bousta entendidoa? Ronald VAI TOMAR NO COOL."
+  m_text: 'Texto de teste de texto de texto de teste. TESTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3f63c1f492454d84db1b3097e32b69f9, type: 2}
   m_sharedMaterial: {fileID: -8636902179813771075, guid: 3f63c1f492454d84db1b3097e32b69f9, type: 2}
