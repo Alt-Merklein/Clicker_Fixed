@@ -7,7 +7,7 @@ public class Money : MonoBehaviour
 {
     public long currency;
     public long income;
-    private double incomeFloat;
+    public double incomeFloat;
     private int clickMultiplier;
 
     [Header("UI")]
@@ -30,13 +30,15 @@ public class Money : MonoBehaviour
         }
         if (currency < 10000) textoDinheiro.text = "R$" + currency.ToString() + ",00";
         else if (currency < 1000000) textoDinheiro.text = "R$" + ((float) currency/1000f).ToString("0.00") + "K";
+        else if (currency < 1000000000000) textoDinheiro.text = "R$" + ((float) currency/1000000f).ToString("0.00") + "M";
+        else textoDinheiro.text = "R$" + ((double) currency/1000000000f).ToString("0.00") + "B";
 
         //da dinheiro
         incomeFloat += (income * Time.deltaTime);
         if(incomeFloat >= 1)
         {
             currency += (long) incomeFloat;
-            incomeFloat -= (double) ((int) incomeFloat);
+            incomeFloat -= (double) ((long) incomeFloat);
         }
 
     }

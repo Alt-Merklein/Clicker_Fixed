@@ -7,25 +7,31 @@ using TMPro;
 [System.Serializable]
 public class Proletario : MonoBehaviour
 {
-    float timeCounter = 0;
-    private int quantidade = 0, level = 1;
-    public int precoBase; //preco inical
-    private float preco, precoup; 
+    double timeCounter = 0;
+    private int quantidade = 0, level = 0;
+    public int levelMax = 3; //padrão é 3, mas tem alguns com 4
+
+    public long precoBase; //preco inical
+    public long precoUpBase;
+    private double preco, precoup; 
+
     [Header("Multiplicadores")]
     [SerializeField]
-    private int multiplicadorBase; //valor do minion a cada segundo
-
+    private long multiplicadorBase; //valor do minion a cada segundo
+    private double[] multiplicadorDeUpBase = {2, 1.7, 1.5, 2}; //valor q aumenta ao dar update no minion
     [SerializeField]
-    private float multiplicadorPreco = 1.1f;
+    private double multiplicadorPreco = 1.1;
     [SerializeField]
-    private float multiplicadorPrecoUp = 2f;
+    private double multiplicadorPrecoUp = 2;
 
     [Header("Textos")]
     public TextMeshProUGUI precoText;
     public TextMeshProUGUI precoUpText;
     public TextMeshProUGUI ganhosText;
+    public TextMeshProUGUI quantidadeText;
 
     [Header("Cores")]
+    public Sprite[] fotos; 
     public Image sprite;
     public Image botaoDeCompra;
     public Color green;
@@ -41,7 +47,8 @@ public class Proletario : MonoBehaviour
                 sprite.color = new Color(1,1,1,1);
             }
             quantidade++;
-            money.currency -= (int) preco;
+            quantidadeText.text = quantidade.ToString();
+            money.currency -= (long) preco;
             preco *= multiplicadorPreco;
             money.income += multiplicadorBase;
             AtualizaPreco();
@@ -50,43 +57,47 @@ public class Proletario : MonoBehaviour
 
     void AtualizaPreco()
     {
-        precoText.text = string.Concat("R$", ((int) preco).ToString());
+        precoText.text = string.Concat("R$", ((long) preco).ToString());
         ganhosText.text = (quantidade * multiplicadorBase).ToString() + "/s";
     }
 
-    void Upgrade()
+    public void LevelUp()
     {
-        if (money.currency >= precoup)
+        if (money.currency >= precoup && level < levelMax)
         {
-            level++;
-            money.currency -= (int) precoup;
+            money.currency -= (long) precoup;
             precoup *= multiplicadorPrecoUp;
+            money.income -= multiplicadorBase * quantidade;
+            multiplicadorBase = (long) (((double) multiplicadorBase) * multiplicadorDeUpBase[level]);
+            ganhosText.text = (quantidade * multiplicadorBase).ToString() + "/s";
+            money.income += multiplicadorBase * quantidade;
+            level++;
+            AtualizaUp();
+            
         }
     }
 
     void AtualizaUp()
     {
-        precoUpText.text = string.Concat("R$", ((int) precoup).ToString());
+        if(level == levelMax)
+        {
+            precoUpText.text = "NÍVEL MÁXIMO";
+        }
+        else{
+            precoUpText.text = string.Concat("R$", ((long) precoup).ToString());
+            sprite.sprite = fotos[level];
+            }
     }
     void Start(){
         money = GameObject.Find("MoneyManager").GetComponent<Money>();
         preco = precoBase;
+        precoup = precoUpBase;
+        sprite.sprite = fotos[0];
         AtualizaPreco();
+        AtualizaUp();
     }
 
     void Update(){
-        // if (timeCounter >= 1f/(quantidade * multiplicadorBase) && money.currency < 10000){
-        //     timeCounter = 0f;
-        //     money.currency++;
-            
-        // }
-        // else if(timeCounter >= 1f && money.currency > 10000)
-        // {
-        //     timeCounter = 0f;
-        //     money.currency += quantidade * multiplicadorBase;
-        //     ganhosText.text = (quantidade * multiplicadorBase).ToString() + "/s";
-        // }
-        // timeCounter += Time.deltaTime;
         if (money.currency >= preco) botaoDeCompra.color = green;
         else botaoDeCompra.color = red;
     }
