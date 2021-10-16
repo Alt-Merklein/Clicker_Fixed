@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 631945136}
   - component: {fileID: 631945137}
   - component: {fileID: 631945139}
+  - component: {fileID: 631945140}
   m_Layer: 5
   m_Name: CreditsButton
   m_TagString: Untagged
@@ -454,6 +455,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1500555495}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: mouseClick
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &631945137
@@ -572,6 +585,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &631945140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631945134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1500555495}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: mouseHover
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1042881897
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,6 +845,7 @@ GameObject:
   - component: {fileID: 1316701156}
   - component: {fileID: 1316701157}
   - component: {fileID: 1316701159}
+  - component: {fileID: 1316701160}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -842,7 +885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -883,6 +926,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1500555495}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: mouseClick
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1316701157
@@ -1001,6 +1056,110 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1316701160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316701154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1500555495}
+          m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+          m_MethodName: PlaySound
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: mouseHover
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!1 &1500555494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1500555496}
+  - component: {fileID: 1500555495}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1500555495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500555494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e1e1acab631504fa5f0fc56fa6b733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: coinClick
+    clip: {fileID: 8300000, guid: 574700005de952d4ca47e9686762b653, type: 3}
+    volume: 0.636
+    pitch: 1.7
+    loop: 0
+    source: {fileID: 0}
+  - name: compraProletario
+    clip: {fileID: 8300000, guid: 3cce2e2bdbfaf774da49426088aa8776, type: 3}
+    volume: 0.745
+    pitch: 2.05
+    loop: 0
+    source: {fileID: 0}
+  - name: carta
+    clip: {fileID: 8300000, guid: 5df574bd9afb4ca4f829b3745368d878, type: 3}
+    volume: 0.745
+    pitch: 2.05
+    loop: 0
+    source: {fileID: 0}
+  - name: mouseHover
+    clip: {fileID: 8300000, guid: 469deca4e4c30aa47b2c5869b02f6c5b, type: 3}
+    volume: 0.745
+    pitch: 2.05
+    loop: 0
+    source: {fileID: 0}
+  - name: mouseClick
+    clip: {fileID: 8300000, guid: 84172b0ffdc45fe4bad9734bfb590b39, type: 3}
+    volume: 0.446
+    pitch: 2.05
+    loop: 0
+    source: {fileID: 0}
+  instance: {fileID: 0}
+--- !u!4 &1500555496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500555494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.60111415, y: 1.673377, z: -10.589358}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2040961696967374031
 PrefabInstance:
   m_ObjectHideFlags: 0
