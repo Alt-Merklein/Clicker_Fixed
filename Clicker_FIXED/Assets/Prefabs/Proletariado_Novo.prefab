@@ -1008,7 +1008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d91d027fe174640aef5ef1b3bc36d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelMax: 3
+  levelMax: 4
   precoBase: 25
   precoUpBase: 0
   multiplicadorBase: 1
@@ -1022,6 +1022,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d69a0b9e82ae74b43a15ae04606d12d4, type: 3}
   - {fileID: 21300000, guid: 11d951c87ca2aa64c979a69ad628c5c2, type: 3}
   - {fileID: 21300000, guid: efaba3608f2ff2e44bcb7d847c355c25, type: 3}
+  - {fileID: 21300000, guid: 4714a217fe75cb346ab2052610f3c255, type: 3}
   sprite: {fileID: 1332852815672381734}
   botaoDeCompra: {fileID: 6617199669423541741}
   green: {r: 0.22075468, g: 1, b: 0.5332945, a: 1}
