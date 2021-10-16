@@ -43,6 +43,7 @@ public class Proletario : MonoBehaviour
             quantidade++;
             money.currency -= (int) preco;
             preco *= multiplicadorPreco;
+            money.income += multiplicadorBase;
             AtualizaPreco();
         }
     }
@@ -50,6 +51,7 @@ public class Proletario : MonoBehaviour
     void AtualizaPreco()
     {
         precoText.text = string.Concat("R$", ((int) preco).ToString());
+        ganhosText.text = (quantidade * multiplicadorBase).ToString() + "/s";
     }
 
     void Upgrade()
@@ -73,12 +75,18 @@ public class Proletario : MonoBehaviour
     }
 
     void Update(){
-        if (timeCounter >= 1f/(quantidade * multiplicadorBase)){
-            timeCounter = 0f;
-            money.currency++;
-            ganhosText.text = (quantidade * multiplicadorBase).ToString() + "/s";
-        }
-        timeCounter += Time.deltaTime;
+        // if (timeCounter >= 1f/(quantidade * multiplicadorBase) && money.currency < 10000){
+        //     timeCounter = 0f;
+        //     money.currency++;
+            
+        // }
+        // else if(timeCounter >= 1f && money.currency > 10000)
+        // {
+        //     timeCounter = 0f;
+        //     money.currency += quantidade * multiplicadorBase;
+        //     ganhosText.text = (quantidade * multiplicadorBase).ToString() + "/s";
+        // }
+        // timeCounter += Time.deltaTime;
         if (money.currency >= preco) botaoDeCompra.color = green;
         else botaoDeCompra.color = red;
     }
