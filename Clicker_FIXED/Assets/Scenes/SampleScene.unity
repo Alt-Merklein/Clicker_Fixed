@@ -1654,6 +1654,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: fotos.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: d3f169714a526e04f933346f9b775580, type: 3}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: fotos.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: d8626d9c8bd45af47ac19e79a5729e94, type: 3}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: descricoes.Array.data[0]
+      value: Aspof
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: descricoes.Array.data[1]
+      value: AspofDev
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
 --- !u!224 &1052598106 stripped
