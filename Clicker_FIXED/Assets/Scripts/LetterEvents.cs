@@ -28,7 +28,7 @@ public class LetterEvents : MonoBehaviour
             StartCoroutine(Desligamento());
         }
         else if (consequenceIndex == 2){
-            SceneManager.LoadScene("StartScene");
+            SceneManager.LoadScene("GameOver");
         }
         EndLetter(); 
         //ADICIONAR MAIS EVENTOS AQUI
