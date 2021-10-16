@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 94}
-  m_SizeDelta: {x: 160, y: 35}
+  m_SizeDelta: {x: 200, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8209233913833584095
 CanvasRenderer:
@@ -1014,10 +1014,16 @@ MonoBehaviour:
   multiplicadorBase: 1
   multiplicadorPreco: 1.1
   multiplicadorPrecoUp: 2
+  descricoes:
+  - "Bixo que resolve quest\xE3o"
+  - "Bixo que cria quest\xE3o"
+  - Bixo dev
+  - Spira
   precoText: {fileID: 3016607010156595761}
   precoUpText: {fileID: 3558884267182664107}
   ganhosText: {fileID: 212445524599606463}
   quantidadeText: {fileID: 459292893425791866}
+  nomeText: {fileID: 7668665404553892548}
   fotos:
   - {fileID: 21300000, guid: d69a0b9e82ae74b43a15ae04606d12d4, type: 3}
   - {fileID: 21300000, guid: 11d951c87ca2aa64c979a69ad628c5c2, type: 3}
@@ -1120,8 +1126,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

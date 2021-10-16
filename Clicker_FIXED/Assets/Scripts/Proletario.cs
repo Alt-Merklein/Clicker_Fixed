@@ -25,10 +25,13 @@ public class Proletario : MonoBehaviour
     private double multiplicadorPrecoUp = 2;
 
     [Header("Textos")]
+    public string[] descricoes;
     public TextMeshProUGUI precoText;
     public TextMeshProUGUI precoUpText;
     public TextMeshProUGUI ganhosText;
     public TextMeshProUGUI quantidadeText;
+    public TextMeshProUGUI nomeText;
+
 
     [Header("Cores")]
     public Sprite[] fotos; 
@@ -83,16 +86,19 @@ public class Proletario : MonoBehaviour
         {
             precoUpText.text = "NÍVEL MÁXIMO";
         }
-        else{
+        else
+        {
             precoUpText.text = string.Concat("R$", ((long) precoup).ToString());
             sprite.sprite = fotos[level];
-            }
+            nomeText.text = descricoes[level];
+        }
     }
     void Start(){
         money = GameObject.Find("MoneyManager").GetComponent<Money>();
         preco = precoBase;
         precoup = precoUpBase;
         sprite.sprite = fotos[0];
+        nomeText.text = descricoes[0];
         AtualizaPreco();
         AtualizaUp();
     }
