@@ -75,7 +75,7 @@ public class Proletario : MonoBehaviour
     void Update(){
         if (timeCounter >= 1f/(quantidade * multiplicadorBase)){
             timeCounter = 0f;
-            money.currency += quantidade * multiplicadorBase;
+            money.currency++;
             ganhosText.text = (quantidade * multiplicadorBase).ToString() + "/s";
         }
         timeCounter += Time.deltaTime;
