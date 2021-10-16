@@ -14,6 +14,9 @@ public class LetterEvents : MonoBehaviour
     [Header("GUI")]
     public TextMeshProUGUI remetente;
     public TextMeshProUGUI mensagem;
+
+    public GameObject botaoNegar;
+    public GameObject textoNegar;
     void Start(){
         money = GameObject.Find("MoneyManager").GetComponent<Money>();
         carta.SetActive(false);
@@ -32,10 +35,20 @@ public class LetterEvents : MonoBehaviour
     }
 
     void StartLetter(Evento escolhido){
+        if (escolhido.consequenciaIndex % 2 == 0){
+            //BOTÃO DE NEGAR NÃO VAI APARECER NOS EVENTOS PARES POR CONVENIÊNCIA
+            botaoNegar.SetActive(false);
+            textoNegar.SetActive(false);
+        }
+        else{
+            botaoNegar.SetActive(true);
+            textoNegar.SetActive(true);
+        }
         consequenceIndex = escolhido.consequenciaIndex;
         remetente.text = escolhido.remetente;
         mensagem.text = escolhido.mensagem;
         carta.SetActive(true);
+        FindObjectOfType<AudioManager>().PlaySound("carta");
         RemoveEvento(escolhido.consequenciaIndex);
 
     }

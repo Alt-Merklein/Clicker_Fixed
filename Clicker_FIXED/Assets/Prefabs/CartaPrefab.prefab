@@ -194,6 +194,8 @@ MonoBehaviour:
     consequenciaIndex: 2
   remetente: {fileID: 993161513742604778}
   mensagem: {fileID: 993161513632219892}
+  botaoNegar: {fileID: 993161513189829794}
+  textoNegar: {fileID: 993161511701363785}
 --- !u!1 &993161511956397653
 GameObject:
   m_ObjectHideFlags: 0

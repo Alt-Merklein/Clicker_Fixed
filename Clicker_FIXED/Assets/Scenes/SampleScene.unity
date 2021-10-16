@@ -1003,12 +1003,17 @@ PrefabInstance:
         e n\xF3s dois sairemos ganhando, posso te prometer um lucro de 80K."
       objectReference: {fileID: 0}
     - target: {fileID: 993161511729039616, guid: c592eadeb864f094d8da725425e68339, type: 3}
+      propertyPath: allEvents.Array.data[1].mensagem
+      value: "O seu envolvimento com o roubo de R$80.000 foi descoberto. Voc\xEA
+        ser\xE1 eliminado imediatamente."
+      objectReference: {fileID: 0}
+    - target: {fileID: 993161511729039616, guid: c592eadeb864f094d8da725425e68339, type: 3}
       propertyPath: allEvents.Array.data[0].remetente
-      value: "An\xF4nimo"
+      value: "-An\xF4nimo"
       objectReference: {fileID: 0}
     - target: {fileID: 993161511729039616, guid: c592eadeb864f094d8da725425e68339, type: 3}
       propertyPath: allEvents.Array.data[1].remetente
-      value: DAE
+      value: -DAE
       objectReference: {fileID: 0}
     - target: {fileID: 993161511729039616, guid: c592eadeb864f094d8da725425e68339, type: 3}
       propertyPath: allEvents.Array.data[0].consequenciaIndex
@@ -1108,6 +1113,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 993161512789809041, guid: c592eadeb864f094d8da725425e68339, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 993161513189829796, guid: c592eadeb864f094d8da725425e68339, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 993161513503493460, guid: c592eadeb864f094d8da725425e68339, type: 3}
+      propertyPath: m_Navigation.m_Mode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2010,6 +2023,24 @@ MonoBehaviour:
   - name: compraProletario
     clip: {fileID: 8300000, guid: 3cce2e2bdbfaf774da49426088aa8776, type: 3}
     volume: 0.745
+    pitch: 2.05
+    loop: 0
+    source: {fileID: 0}
+  - name: carta
+    clip: {fileID: 8300000, guid: 5df574bd9afb4ca4f829b3745368d878, type: 3}
+    volume: 0.745
+    pitch: 2.05
+    loop: 0
+    source: {fileID: 0}
+  - name: mouseHover
+    clip: {fileID: 8300000, guid: 469deca4e4c30aa47b2c5869b02f6c5b, type: 3}
+    volume: 0.745
+    pitch: 2.05
+    loop: 0
+    source: {fileID: 0}
+  - name: mouseClick
+    clip: {fileID: 8300000, guid: 84172b0ffdc45fe4bad9734bfb590b39, type: 3}
+    volume: 0.446
     pitch: 2.05
     loop: 0
     source: {fileID: 0}

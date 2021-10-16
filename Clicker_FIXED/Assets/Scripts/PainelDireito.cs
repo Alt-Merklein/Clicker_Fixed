@@ -10,6 +10,7 @@ public class PainelDireito : MonoBehaviour
     public float width;
     public RectTransform toggleButton;
     public void AbreFechaDireito(){
+        FindObjectOfType<AudioManager>().PlaySound("mouseClick");
         abertodir = 1 - abertodir;
         toggleButton.localScale = new Vector3 (-toggleButton.localScale.x, toggleButton.localScale.y, toggleButton.localScale.z);
         if (abertodir == 0){
@@ -18,6 +19,7 @@ public class PainelDireito : MonoBehaviour
         else GetComponent<RectTransform>().localPosition += Vector3.left * width;
     }
     public void AbreFechaEsquerdo(){
+        FindObjectOfType<AudioManager>().PlaySound("mouseClick");
         abertoesq = 1 - abertoesq;
         toggleButton.localScale = new Vector3 (-toggleButton.localScale.x, toggleButton.localScale.y, toggleButton.localScale.z);
         if (abertoesq == 0){
