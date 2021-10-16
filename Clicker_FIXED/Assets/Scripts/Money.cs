@@ -27,6 +27,7 @@ public class Money : MonoBehaviour
             print(Camera.main.ScreenToWorldPoint(Input.mousePosition));
             GameObject moeda = Instantiate(coin,Camera.main.ScreenToWorldPoint(Input.mousePosition) + 10*Vector3.forward,Quaternion.identity);
             Destroy(moeda,.6f);
+            FindObjectOfType<AudioManager>().PlaySound("coinClick");
         }
         if (currency < 10000) textoDinheiro.text = "R$" + currency.ToString() + ",00";
         else if (currency < 1000000) textoDinheiro.text = "R$" + ((float) currency/1000f).ToString("0.00") + "K";

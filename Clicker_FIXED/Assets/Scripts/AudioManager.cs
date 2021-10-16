@@ -8,7 +8,8 @@ public class AudioManager : MonoBehaviour
 {
     //para acessar usar FindObjectOfType<AudioManager>("name");
     public Sound[] sounds;
-
+    
+    [HideInInspector]
     public AudioManager instance; 
     // Start is called before the first frame update
     void Awake()
@@ -34,7 +35,7 @@ public class AudioManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void PlaySound(string name)
+    public void PlaySound(string name)
     {
         Sound s = Array.Find(sounds, sounds => sounds.name == name);
         if (s == null)
