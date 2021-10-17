@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class LetterEvents : MonoBehaviour
 {
+    int doOnce = 0;
     public Image painel;
     public GameObject carta;
     public Evento[] allEvents;
@@ -80,7 +81,8 @@ public class LetterEvents : MonoBehaviour
             StartLetter(allEvents[0]);
         }
         if (money.currency > 7563 && allEvents[3].consequenciaIndex != 0){
-            StartLetter(allEvents[3]);
+            if (doOnce == 0) {StartCoroutine(Carta3()); doOnce = 1;}
+            //StartLetter(allEvents[3]);
         }
     }
 
@@ -88,5 +90,10 @@ public class LetterEvents : MonoBehaviour
         yield return new WaitForSeconds(30);
         StartLetter(allEvents[1]); //Evento de desligamento
 
+    }
+
+    IEnumerator Carta3(){
+        yield return new WaitForSeconds(15);
+        StartLetter(allEvents[3]);
     }
 }
