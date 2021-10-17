@@ -64,7 +64,6 @@ public class LetterEvents : MonoBehaviour
     }
 
     public void EndLetter(){
-        if (consequenceIndex == 2) SceneManager.LoadScene("GaneOver");
         carta.SetActive(false);
     }
 
