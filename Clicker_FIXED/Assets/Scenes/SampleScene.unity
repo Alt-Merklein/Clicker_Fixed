@@ -218,6 +218,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: levelMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: precoBase
+      value: 25000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: precoUpBase
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: multiplicadorBase
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: descricoes.Array.data[0]
+      value: Formando Computeiro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: descricoes.Array.data[1]
+      value: Big Tech
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
 --- !u!224 &16176423 stripped
@@ -329,6 +353,34 @@ PrefabInstance:
     - target: {fileID: 6617199670466696650, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: levelMax
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: precoBase
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: precoUpBase
+      value: 6000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: multiplicadorBase
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: descricoes.Array.data[0]
+      value: "Treinee de empresa j\xFAnior"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: descricoes.Array.data[1]
+      value: "Diretor de empresa j\xFAnior"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: descricoes.Array.data[2]
+      value: "Presidente de empresa j\xFAnior"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
@@ -1790,6 +1842,10 @@ PrefabInstance:
       value: 32000
       objectReference: {fileID: 0}
     - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: multiplicadorBase
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
       propertyPath: fotos.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: d3f169714a526e04f933346f9b775580, type: 3}
@@ -1803,7 +1859,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
       propertyPath: descricoes.Array.data[1]
-      value: AspofDev
+      value: Aspof Dev
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: descricoes.Array.data[2]
+      value: Aspof Mercado Financeiro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: descricoes.Array.data[3]
+      value: Aspof Instagramer
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
@@ -1988,6 +2052,30 @@ PrefabInstance:
     - target: {fileID: 6617199670466696650, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: levelMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: precoBase
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: precoUpBase
+      value: 20000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: multiplicadorBase
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: descricoes.Array.data[0]
+      value: CandyShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: descricoes.Array.data[1]
+      value: CentroComercial
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
@@ -2872,6 +2960,30 @@ PrefabInstance:
     - target: {fileID: 6617199670466696650, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: levelMax
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: precoBase
+      value: 66666
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: precoUpBase
+      value: 333333
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: multiplicadorBase
+      value: 8192
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: descricoes.Array.data[0]
+      value: Formando Mercado Financeiro
+      objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: descricoes.Array.data[1]
+      value: Banqueiro
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
