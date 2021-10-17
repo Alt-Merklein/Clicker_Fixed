@@ -1,15 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class LetterEvents : MonoBehaviour
 {
+    public Image painel;
     public GameObject carta;
     public Evento[] allEvents;
     private Money money;
-    private int consequenceIndex = 0;
+    private int consequenceIndex = 3;
 
     [Header("GUI")]
     public TextMeshProUGUI remetente;
@@ -30,7 +30,10 @@ public class LetterEvents : MonoBehaviour
         else if (consequenceIndex == 2){
             SceneManager.LoadScene("GameOver");
         }
-        EndLetter(); 
+        else if (consequenceIndex == 6){
+            money.currency = 0;
+        }
+        EndLetter();
         //ADICIONAR MAIS EVENTOS AQUI
     }
 
@@ -48,6 +51,7 @@ public class LetterEvents : MonoBehaviour
         remetente.text = escolhido.remetente;
         mensagem.text = escolhido.mensagem;
         carta.SetActive(true);
+        painel.enabled = true;
         FindObjectOfType<AudioManager>().PlaySound("carta");
         RemoveEvento(escolhido.consequenciaIndex);
 
@@ -65,11 +69,18 @@ public class LetterEvents : MonoBehaviour
 
     public void EndLetter(){
         carta.SetActive(false);
+        painel.enabled = false;
     }
 
     void Update(){
-        if (money.currency > 1000){
-            if (allEvents[0].consequenciaIndex != 0) StartLetter(allEvents[0]);
+        if (money.currency == 0 && allEvents[2].consequenciaIndex != 0){
+            StartLetter(allEvents[2]);
+        }
+        if (money.currency > 1000 && allEvents[0].consequenciaIndex != 0){
+            StartLetter(allEvents[0]);
+        }
+        if (money.currency > 7563 && allEvents[3].consequenciaIndex != 0){
+            StartLetter(allEvents[3]);
         }
     }
 

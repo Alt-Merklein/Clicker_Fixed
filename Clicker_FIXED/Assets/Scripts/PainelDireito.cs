@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 public class PainelDireito : MonoBehaviour
 {
     //ESSE SCRIPT É PRA ESCONDER/MOSTRAR O PAINEL DA DIREITA QUANDO APERTAR NO BOTÃO COM A SETINHA

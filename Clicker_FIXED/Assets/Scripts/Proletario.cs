@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -69,6 +67,7 @@ public class Proletario : MonoBehaviour
     {
         if (money.currency >= precoup && level < levelMax)
         {
+            FindObjectOfType<AudioManager>().PlaySound("mouseClick");
             money.currency -= (long) precoup;
             precoup *= multiplicadorPrecoUp;
             money.income -= multiplicadorBase * quantidade;
