@@ -9,6 +9,8 @@ public class Money : MonoBehaviour
     public long income;
     public double incomeFloat;
     private int clickMultiplier;
+    public long upgrade = 0, upbasic, aer, precoup;
+
 
     [Header("UI")]
     public TextMeshProUGUI textoDinheiro;
@@ -40,6 +42,17 @@ public class Money : MonoBehaviour
         {
             currency += (long) incomeFloat;
             incomeFloat -= (double) ((long) incomeFloat);
+        }
+
+        if (currency >= precoup && upgrade < upbasic)
+        {
+            clickMultiplier *= 3;
+            upgrade++;
+        }
+
+        else if (currency >= precoup && upgrade == upbasic)
+        {
+            //criar metodo se selecao de classes
         }
 
     }
