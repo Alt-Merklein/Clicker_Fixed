@@ -9,11 +9,12 @@ public class Money : MonoBehaviour
     public long income;
     public double incomeFloat;
     private int clickMultiplier;
-    public long upgrade = 0, upbasic, aer, precoup;
+    public long upgrade = 0, upbasic, aer, aesp, civil, comp, ele, mec, precoup;
 
 
     [Header("UI")]
     public TextMeshProUGUI textoDinheiro;
+    public TextMeshProUGUI precoText;
 
     [Header("Prefabs")]
     public GameObject coin;
@@ -44,16 +45,24 @@ public class Money : MonoBehaviour
             incomeFloat -= (double) ((long) incomeFloat);
         }
 
+    }
+
+    public void Upgrade(){
         if (currency >= precoup && upgrade < upbasic)
         {
-            clickMultiplier *= 3;
+            clickMultiplier *= 5;
+            currency = currency - precoup;
+            precoup *= 3;
+            if (precoup < 10000) precoText.text = "R$" + precoup.ToString() + ",00";
+            else if (precoup < 1000000) precoText.text = "R$" + ((float) precoup/1000f).ToString("0.00") + "K";
+            else if (precoup < 1000000000000) precoText.text = "R$" + ((float) precoup/1000000f).ToString("0.00") + "M";
+            else precoText.text = "R$" + ((double) precoup/1000000000f).ToString("0.00") + "B";
             upgrade++;
         }
 
         else if (currency >= precoup && upgrade == upbasic)
         {
-            //criar metodo se selecao de classes
+            
         }
-
     }
 }
