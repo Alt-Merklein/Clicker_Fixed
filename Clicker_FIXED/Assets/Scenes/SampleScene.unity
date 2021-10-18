@@ -1494,6 +1494,10 @@ PrefabInstance:
       propertyPath: precoUpBase
       value: 400
       objectReference: {fileID: 0}
+    - target: {fileID: 7853531578883038162, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
+      propertyPath: descricoes.Array.data[3]
+      value: Spira Fodase
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 015421d6214a486478a2ecafcee89f1a, type: 3}
 --- !u!224 &716121783 stripped
