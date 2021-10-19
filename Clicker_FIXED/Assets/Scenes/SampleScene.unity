@@ -1471,6 +1471,11 @@ PrefabInstance:
         ser\xE1 eliminado imediatamente."
       objectReference: {fileID: 0}
     - target: {fileID: 993161511729039616, guid: c592eadeb864f094d8da725425e68339, type: 3}
+      propertyPath: allEvents.Array.data[2].mensagem
+      value: "Ol\xE1, bem vindo ao ExploITAtion. Seu objetivo \xE9 lucrar o m\xE1ximo
+        poss\xEDvel explorando a m\xE3o de obra iteana. Aproveite :)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 993161511729039616, guid: c592eadeb864f094d8da725425e68339, type: 3}
       propertyPath: allEvents.Array.data[0].remetente
       value: "-An\xF4nimo"
       objectReference: {fileID: 0}
