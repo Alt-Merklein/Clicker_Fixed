@@ -9,13 +9,13 @@ public class Proletario : MonoBehaviour
     private int quantidade = 0, level = 0;
     public int levelMax = 3; //padrão é 3, mas tem alguns com 4
 
-    public long precoBase; //preco inical
-    public long precoUpBase;
+    public ulong precoBase; //preco inical
+    public ulong precoUpBase;
     private double preco, precoup; 
 
     [Header("Multiplicadores")]
     [SerializeField]
-    private long multiplicadorBase; //valor do minion a cada segundo
+    private ulong multiplicadorBase; //valor do minion a cada segundo
     private double[] multiplicadorDeUpBase = {2, 1.7, 1.5, 2}; //valor q aumenta ao dar update no minion
     [SerializeField]
     private double multiplicadorPreco = 1.1;
@@ -49,7 +49,7 @@ public class Proletario : MonoBehaviour
             }
             quantidade++;
             quantidadeText.text = quantidade.ToString();
-            money.currency -= (long) preco;
+            money.currency -= (ulong) preco;
             preco *= multiplicadorPreco;
             money.income += multiplicadorBase;
             AtualizaPreco();
@@ -59,8 +59,8 @@ public class Proletario : MonoBehaviour
 
     void AtualizaPreco()
     {
-        precoText.text = string.Concat("R$", ((long) preco).ToString());
-        ganhosText.text = (quantidade * multiplicadorBase).ToString() + "/s";
+        precoText.text = string.Concat("R$", ((ulong) preco).ToString());
+        ganhosText.text = ((ulong)quantidade * multiplicadorBase).ToString() + "/s";
     }
 
     public void LevelUp()
@@ -68,12 +68,11 @@ public class Proletario : MonoBehaviour
         if (money.currency >= precoup && level < levelMax)
         {
             FindObjectOfType<AudioManager>().PlaySound("mouseClick");
-            money.currency -= (long) precoup;
-            precoup *= multiplicadorPrecoUp;
-            money.income -= multiplicadorBase * quantidade;
-            multiplicadorBase = (long) (((double) multiplicadorBase) * multiplicadorDeUpBase[level]);
-            ganhosText.text = (quantidade * multiplicadorBase).ToString() + "/s";
-            money.income += multiplicadorBase * quantidade;
+            money.currency -= (ulong) precoup;
+            money.income -= multiplicadorBase * (ulong) quantidade;
+            multiplicadorBase = (ulong) (((double) multiplicadorBase) * multiplicadorDeUpBase[level]);
+            ganhosText.text = ((ulong) quantidade * multiplicadorBase).ToString() + "/s";
+            money.income += multiplicadorBase * (ulong) quantidade;
             level++;
             AtualizaUp();
             
@@ -82,15 +81,19 @@ public class Proletario : MonoBehaviour
 
     void AtualizaUp()
     {
-        if(level == levelMax)
+        if(level == levelMax-1)
         {
             precoUpText.text = "NÍVEL MÁXIMO";
+            sprite.sprite = fotos[level];
+            nomeText.text = descricoes[level];
+            precoup = 9223372036854775800;
         }
         else
         {
-            precoUpText.text = string.Concat("R$", ((long) precoup).ToString());
+            precoUpText.text = string.Concat("R$", ((ulong) precoup).ToString());
             sprite.sprite = fotos[level];
             nomeText.text = descricoes[level];
+            precoup *= multiplicadorPrecoUp;
         }
     }
     void Start(){
